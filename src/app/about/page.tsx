@@ -16,33 +16,33 @@ export default function AboutPage() {
         <div className="max-w-[1200px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-white/20">
             <div className="flex flex-col gap-1">
-              <span className="text-4xl font-black text-white">20+</span>
-              <span className="text-blue-200 text-sm font-medium uppercase tracking-wider">Years Experience</span>
+              <span className="text-4xl font-black text-white">50+</span>
+              <span className="text-blue-200 text-sm font-medium uppercase tracking-wider">Years Combined Experience</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-4xl font-black text-white">450+</span>
-              <span className="text-blue-200 text-sm font-medium uppercase tracking-wider">Projects Completed</span>
+              <span className="text-4xl font-black text-white">100+</span>
+              <span className="text-blue-200 text-sm font-medium uppercase tracking-wider">Projects Completed Annually</span>
             </div>
-            <div className="flex flex-col gap-1">
+            {/* <div className="flex flex-col gap-1">
               <span className="text-4xl font-black text-white">32</span>
               <span className="text-blue-200 text-sm font-medium uppercase tracking-wider">Awards Won</span>
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-4xl font-black text-white">100%</span>
               <span className="text-blue-200 text-sm font-medium uppercase tracking-wider">Safety Record</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       <div className="w-full py-16 md:py-24">
         <div className="max-w-[960px] mx-auto px-6 md:px-10 flex flex-col gap-10">
-          <div className="text-center">
+          {/* <div className="text-center">
             <h2 className="text-secondary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] pb-4">Our Story</h2>
             <p className="text-slate-600 dark:text-slate-300 text-lg font-normal leading-relaxed max-w-[700px] mx-auto">
               Established in the heart of the Pacific Northwest, HJB Engineering has been shaping the skyline of Vancouver for over two decades. Our journey is built on a foundation of technical excellence, a commitment to sustainable structural design, and a deep respect for the communities we build for.
-            </p>
-          </div>
-          <div className="mt-8 bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+            </p> 
+          </div> */}
+          {/*<div className="mt-8 bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
             <div className="grid grid-cols-[40px_1fr] gap-x-6 px-4">
               <div className="flex flex-col items-center gap-1 pt-3">
                 <div className="text-primary bg-blue-50 dark:bg-blue-900/30 p-2 rounded-full">
@@ -99,10 +99,10 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="w-full bg-white dark:bg-slate-900 py-16 md:py-24">
+      {/* <div className="w-full bg-white dark:bg-slate-900 py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-6 md:px-10">
           <div className="text-center mb-16">
             <h2 className="text-secondary dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] mb-4">Our Core Values</h2>
@@ -138,7 +138,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="w-full py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-6 md:px-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -155,13 +155,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
               <div className="aspect-[3/4] overflow-hidden bg-slate-200">
-                <Image alt="Professional headshot of James Sterling" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Man in blue suit smiling professionally" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbbcrbao6bvSZMSeZsONrh9pQq-iXa529TeI61qqsmYVrTbzfErmY-iXBhNa-s1dffkAVhdQu-_KRqum99AKf7NP-uXpigmcgQKsckzw5b6lWoGr3-0lLxoPkb4yGKZmYL1GQpei7j1Kd_PHpRmTjy5vdZjpNPTNHJvfE7zQTTuTlFXYpIISek-PVABGukiLFKCDvSPCA8V6Om20Nyc9GbBSVodT9gVoX057QFTNh9j_jo8xBTdgd6hJYJx2e1hwLHf1uTtDtbnJVl" width={300} height={400} />
+                <Image alt="Professional headshot of Doug Birch" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Man in blue suit smiling professionally" src="/images/people/Doug Birch_Updated.JPG" width={300} height={400} />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-secondary dark:text-white">James Sterling, P.Eng</h3>
-                <p className="text-primary text-sm font-medium mb-2">Principal Engineer</p>
+                <h3 className="text-lg font-bold text-secondary dark:text-white">Doug Birch, P.Eng, Struct Eng.</h3>
+                <p className="text-primary text-sm font-medium mb-2">Principal</p>
                 <p className="text-slate-500 dark:text-slate-400 text-xs line-clamp-3 mb-3">
-                  James founded HJB Engineering with a vision to modernize structural consulting. He specializes in high-rise concrete design and seismic resilience.
+                  dsafasdfasdf
                 </p>
                 <span className="text-xs font-bold text-slate-900 dark:text-slate-200 group-hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
                   Read Bio <span className="material-symbols-outlined text-[16px]">chevron_right</span>
@@ -170,13 +170,13 @@ export default function AboutPage() {
             </div>
             <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
               <div className="aspect-[3/4] overflow-hidden bg-slate-200">
-                <Image alt="Professional headshot of Elena Rostova" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Woman in blazer with glasses looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSX3Z5P600FM4deCD4iUmk--ooIZsCxOF1YA5g0UH7FdTV1fmKGAlRwvocOwfvpkM86g3CVfSgYvx4mFFFp3vRY5VIsv2jt5toojTVeMKFOpkfuLIEN0njEQVk5NQeNWpmPZv0Y06SAUES1WMbgcgyepInzfKMqU9w7xrZp6-eFJG3RbN6F-D5QqIHi38M98EVZxDaNDUF38XK0aHur2w8cJZXJIPFPhR-7-_PsLlEO4xtnx35rCuy1-NYQHypyWv_yykURpPfe1DK" width={300} height={400} />
+                <Image alt="Professional headshot of Elena Rostova" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Woman in blazer with glasses looking confident" src="/images/people/Michael H.JPG" width={300} height={400} />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-secondary dark:text-white">Elena Rostova, P.Eng</h3>
-                <p className="text-primary text-sm font-medium mb-2">Senior Structural Lead</p>
+                <h3 className="text-lg font-bold text-secondary dark:text-white">Michael Halliday, P.Eng</h3>
+                <p className="text-primary text-sm font-medium mb-2">Principal</p>
                 <p className="text-slate-500 dark:text-slate-400 text-xs line-clamp-3 mb-3">
-                  With 15 years in steel design, Elena leads our industrial division. She is passionate about efficient material usage and lean construction.
+                  sfdgsfdgdfsg
                 </p>
                 <span className="text-xs font-bold text-slate-900 dark:text-slate-200 group-hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
                   Read Bio <span className="material-symbols-outlined text-[16px]">chevron_right</span>
@@ -185,28 +185,13 @@ export default function AboutPage() {
             </div>
             <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
               <div className="aspect-[3/4] overflow-hidden bg-slate-200">
-                <Image alt="Professional headshot of Michael Chen" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Man in grey suit tie smiling at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUieT9sT36Gk7dRC_zWkp1A-xXi6Pvz74jflLakC8oAGABtxP3x_DMKBonFSEDABYLATEK1CnxDazYjtpBhAEKwRSKVNwdD8AWwsmw7-6nK8sClmuXo03PkNWmy1SqW0W35LrUIQc6aNc-61qmADNHvjANW98P0837W3wfZ-83ezS836eCY8hy0E8XFJQC9_8PJR9-g03GblMoihcVIGxL-nc06ePwNyQ6XJai1sXBDgjoJQ-tCvYPnbvEdLwKyhQsIjT437_073CS" width={300} height={400} />
+                <Image alt="Professional headshot of Michael Chen" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Man in grey suit tie smiling at camera" src="/images/people/Dylan James Headshot.jpg" width={300} height={400} />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-secondary dark:text-white">Michael Chen</h3>
-                <p className="text-primary text-sm font-medium mb-2">Director of Projects</p>
+                <h3 className="text-lg font-bold text-secondary dark:text-white">DylanJames, P. Eng.</h3>
+                <p className="text-primary text-sm font-medium mb-2">Pincipal</p>
                 <p className="text-slate-500 dark:text-slate-400 text-xs line-clamp-3 mb-3">
-                  Michael ensures every project stays on time and on budget. His background in construction management bridges the gap between design and site.
-                </p>
-                <span className="text-xs font-bold text-slate-900 dark:text-slate-200 group-hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
-                  Read Bio <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-                </span>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
-              <div className="aspect-[3/4] overflow-hidden bg-slate-200">
-                <Image alt="Professional headshot of Sarah Jenkins" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Woman with curly hair smiling outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACVTAgw5IQJkfMn1X9kLXxwMv_fKujpISDqa5qekBwdlDSWLTYdYR2-e-FKvLdr_uqr6kBmipIlmLxKX8vDomORV0ap0sLaOUcpK1zqIpv0r128F9M4MNF7P5XoPyY_1ejv76RDJBi3XvWbxYumxoiCq_B8yBeZZ7vnAUtRUpwkFhiC9NWlotuKNrh_KYX-dtM4vjj5_P4CXZsiShnlSQbSU7AWFRw1ITaudbSgKs5okP4Akr5kSXwu8jFA7x8IjzPfznLuiL4VtDY" width={300} height={400} />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-secondary dark:text-white">Sarah Jenkins</h3>
-                <p className="text-primary text-sm font-medium mb-2">Sustainability Coordinator</p>
-                <p className="text-slate-500 dark:text-slate-400 text-xs line-clamp-3 mb-3">
-                  Sarah champions our green initiatives, focusing on mass timber projects and LEED certification standards for new developments.
+                  fdsafdasfdsafadsf
                 </p>
                 <span className="text-xs font-bold text-slate-900 dark:text-slate-200 group-hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
                   Read Bio <span className="material-symbols-outlined text-[16px]">chevron_right</span>

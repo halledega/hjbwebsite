@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-secondary text-slate-300 pt-16 pb-8">
       <div className="max-w-[1100px] mx-auto px-4 md:px-10">
-        <div className="bg-primary rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left mb-16 shadow-2xl">
+        {/* <div className="bg-primary rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left mb-16 shadow-2xl">
           <div className="max-w-[500px]">
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-3">Ready to start your project?</h2>
             <p className="text-blue-100">Contact our engineering team today for a consultation on your next development.</p>
@@ -16,20 +16,20 @@ export default function Footer() {
               Let&apos;s Build Together
             </button>
           </Link>
-        </div>
+        </div> */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 text-white mb-4">
-              <Image alt="HJB Engineering Logo" className="h-8 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbgBnYXrJf3epX0_NnYlWlAFqxD5vGSq68v0wENwISv60hjQjuOdAKftodp2UfylQoTEDbnR0v2eD5Kg3u5pkrZj-DSHKwH0SVaW-N6-Lsg5IHtVMTHwp6Sk-iENwp6copERwAR20kZasQvao7jHendgurl3iVZHuU1Rbj2iosL7D0_algmkmgqKePcqIdmsdtbe7UY_Hm3cdfwvK6dFNME5EJCUlSNeFd6Nbnsl1rvSrtt7HShKHWbB1uL-VeJXvAH4gLYFix3p0m" width={32} height={32} />
+              <Image alt="HJB Engineering Logo" className="h-8 w-auto brightness-0 invert" src="/images/HJB Logo.png" width={32} height={32} />
               <span className="text-lg font-bold">HJB Engineering</span>
             </div>
-            <p className="text-sm text-slate-400 mb-6">
+            {/* <p className="text-sm text-slate-400 mb-6">
               Professional structural engineering services for a changing world. Built on trust, precision, and innovation.
-            </p>
-            <div className="flex gap-4">
+            </p> */}
+            {/* <div className="flex gap-4">
               <a className="text-slate-400 hover:text-white transition-colors" href="#"><span className="material-symbols-outlined">public</span></a>
               <a className="text-slate-400 hover:text-white transition-colors" href="#"><span className="material-symbols-outlined">alternate_email</span></a>
-            </div>
+            </div> */}
           </div>
           <div>
             <h4 className="text-white font-bold mb-4">Services</h4>

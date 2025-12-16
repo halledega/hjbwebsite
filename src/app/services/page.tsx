@@ -9,17 +9,17 @@ export default function ServicesPage() {
       {/* Hero Section with Background Slideshow */}
       <Slideshow slides={projectsData.projects}>
         <div className="relative z-10 px-6 md:px-10 lg:px-40 py-24 md:py-32 flex justify-center">
-          <div className="flex flex-col gap-6 text-center max-w-[800px]">
-            <div className="inline-flex mx-auto items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
+          {/* <div className="flex flex-col gap-6 text-center max-w-[800px]"> */}
+            {/* <div className="inline-flex mx-auto items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
               <span className="size-2 rounded-full bg-primary animate-pulse"></span>
               <span className="text-blue-100 text-xs font-bold tracking-wider uppercase">Serving Greater Vancouver</span>
-            </div>
-            <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+            </div> */}
+            {/* <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
               Precision Engineering for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">Vancouver&apos;s Skyline</span>
             </h1>
             <p className="text-blue-100 text-lg md:text-xl font-normal leading-relaxed max-w-[640px] mx-auto">
               Expert structural consulting for residential, commercial, and seismic projects across British Columbia. We ensure safety, compliance, and innovation in every blueprint.
-            </p>
+            </p> */}
             <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/projects" className="flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-blue-600 transition-colors text-white text-base font-bold shadow-lg shadow-blue-900/30">
                 View Portfolio
@@ -28,7 +28,7 @@ export default function ServicesPage() {
                 Contact Us
               </Link>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </Slideshow>
       <div className="px-6 md:px-10 lg:px-40 py-12 md:py-20 flex justify-center bg-background-light dark:bg-background-dark">
@@ -134,7 +134,7 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
-          <div className="mt-12 bg-white dark:bg-slate-800 rounded-2xl p-8 md:p-12 relative overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm shadow-secondary/5">
+          {/* <div className="mt-12 bg-white dark:bg-slate-800 rounded-2xl p-8 md:p-12 relative overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm shadow-secondary/5">
             <div className="absolute top-0 right-0 p-8 opacity-5 text-secondary">
               <span className="material-symbols-outlined text-9xl">format_quote</span>
             </div>
@@ -159,7 +159,7 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="bg-primary relative overflow-hidden text-white py-16 px-6 md:px-10 lg:px-40">
