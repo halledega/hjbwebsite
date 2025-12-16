@@ -58,7 +58,7 @@
       "name": "Cold Storage Facility",
       "slug": "cold-storage-facility",
       "location": "Surrey, BC",
-      "type": ["Structural Syteel", "Industrial", "Warehouse"],
+      "type": ["Structural Steel", "Industrial", "Warehouse"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique nibh quis lorem pharetra lacinia. Donec felis nisi, condimentum eu massa ac, fermentum imperdiet mi. Nunc a volutpat metus. Fusce efficitur quam in lacus sagittis laoreet. Sed quis erat malesuada, luctus justo sit amet, dapibus elit. Vestibulum vitae massa enim. Donec ultricies diam a finibus tincidunt. Praesent tempor rutrum metus, ut pretium sapien. Mauris pellentesque ullamcorper elit, nec elementum elit dictum vulputate. Integer lacus purus, feugiat non eros sed, consequat feugiat magna. Vestibulum ultricies egestas ligula vel pulvinar. Mauris pellentesque laoreet dolor eu viverra.",
       "image": "/images/Project Photos/Cold Storage Facility/HJB Biulding_12.JPG",
       "coordinates": [49.3160, -123.0760]
