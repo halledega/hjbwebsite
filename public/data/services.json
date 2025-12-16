@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Commercial",
+    "slug": "commercial",
+    "icon": "domain",
+    "description": "Full structural analysis and design for office buildings, retail spaces, and mixed-use developments."
+  },
+  {
+    "title": "Residential",
+    "slug": "residential",
+    "icon": "house",
+    "description": "Complete structural solutions for single and multifamily residential projects."
+  },
+  {
+    "title": "Industrial",
+    "slug": "industrial",
+    "icon": "factory",
+    "description": "Light of medium industrial projects, specializing in conventional and pre-engineered steel building."
+  },
+  {
+    "title": "Cladding",
+    "slug": "cladding",
+    "icon": "layers",
+    "description": "Support and seismic restraint of masonry veneer"
+  },
+  {
+    "title": "Recreational",
+    "slug": "recreational",
+    "icon": "pool",
+    "description": "Pools, water parks and ice rinks."
+  },
+  {
+    "title": "Boutique Structural Solutions",
+    "slug": "boutique-structural-solutions",
+    "icon": "engineering",
+    "description": "(Please provide a description for this service)"
+  }
+]
