@@ -35,17 +35,17 @@ export default function ServicesPage() {
         <div className="w-full max-w-[1200px] flex flex-col gap-16">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start border-b border-gray-200 dark:border-gray-800 pb-12">
             <div className="flex-1">
-              <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3 flex items-center gap-2">
+              {/* <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3 flex items-center gap-2">
                 <span className="w-8 h-[2px] bg-primary"></span>
                 Our Expertise
-              </h2>
+              </h2> */}
               <h3 className="text-secondary dark:text-white text-3xl md:text-4xl font-bold leading-tight">
                 Comprehensive Structural Solutions
               </h3>
             </div>
             <div className="flex-1">
               <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-                We provide end-to-end structural engineering services tailored to the unique architectural and environmental demands of Vancouver. From seismic retrofitting heritage buildings to designing modern laneway homes, our team brings technical excellence to every project.
+                We provide end-to-end structural engineering services tailored to the unique demands of our clients. No matter the size of project.
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
-          <div className="mt-12">
+          {/* <div className="mt-12">
             <h3 className="text-secondary dark:text-white text-2xl font-bold mb-10 text-center relative">
               Why Partner With Us
               <span className="block w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></span>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <div className="mt-12 bg-white dark:bg-slate-800 rounded-2xl p-8 md:p-12 relative overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm shadow-secondary/5">
             <div className="absolute top-0 right-0 p-8 opacity-5 text-secondary">
               <span className="material-symbols-outlined text-9xl">format_quote</span>
