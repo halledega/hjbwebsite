@@ -5,63 +5,63 @@
       "slug": "luster-products",
       "location": "Chilliwack, BC",
       "type": ["Tilt", "Warehouse"],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique nibh quis lorem pharetra lacinia. Donec felis nisi, condimentum eu massa ac, fermentum imperdiet mi. Nunc a volutpat metus. Fusce efficitur quam in lacus sagittis laoreet. Sed quis erat malesuada, luctus justo sit amet, dapibus elit. Vestibulum vitae massa enim. Donec ultricies diam a finibus tincidunt. Praesent tempor rutrum metus, ut pretium sapien. Mauris pellentesque ullamcorper elit, nec elementum elit dictum vulputate. Integer lacus purus, feugiat non eros sed, consequat feugiat magna. Vestibulum ultricies egestas ligula vel pulvinar. Mauris pellentesque laoreet dolor eu viverra.",
+      "description": "Single story tilt-up warehoouse with attached 2 story office.  The office portion featuues are angled tilt-up central strair core that also leans away from the building.",
       "image": "/images/Project Photos/Luster Products/HJB Biulding_5.JPG",
-      "coordinates": [49.1579, -121.9515]
+      "coordinates": [49.1460980314857, -122.01900218000243]
     },
     {
       "name": "Campbell Heights Office",
       "slug": "campbell-heights-office",
       "location": "Surrey, BC",
       "type": ["Tilt", "Office"],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique nibh quis lorem pharetra lacinia. Donec felis nisi, condimentum eu massa ac, fermentum imperdiet mi. Nunc a volutpat metus. Fusce efficitur quam in lacus sagittis laoreet. Sed quis erat malesuada, luctus justo sit amet, dapibus elit. Vestibulum vitae massa enim. Donec ultricies diam a finibus tincidunt. Praesent tempor rutrum metus, ut pretium sapien. Mauris pellentesque ullamcorper elit, nec elementum elit dictum vulputate. Integer lacus purus, feugiat non eros sed, consequat feugiat magna. Vestibulum ultricies egestas ligula vel pulvinar. Mauris pellentesque laoreet dolor eu viverra.",
+      "description": "A 4 story til-up office with central cast in place concret core.  This project also included an attached 2 story warehouse space.  The centrel core features an full heith open atrium with bridges linking the floors on either side.",
       "image": "/images/Project Photos/Campbell Heights Office/HJB Biulding_1.JPG",
-      "coordinates": [49.1044, -122.8235]
+      "coordinates": [49.0631496170751, -122.7009680444236]
     },
     {
       "name": "Sardis Sports Complex",
       "slug": "sardis-sports-complex",
       "location": "Chilliwack, BC",
       "type": ["Tilt", "Pre-Eng", "Recreational"],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique nibh quis lorem pharetra lacinia. Donec felis nisi, condimentum eu massa ac, fermentum imperdiet mi. Nunc a volutpat metus. Fusce efficitur quam in lacus sagittis laoreet. Sed quis erat malesuada, luctus justo sit amet, dapibus elit. Vestibulum vitae massa enim. Donec ultricies diam a finibus tincidunt. Praesent tempor rutrum metus, ut pretium sapien. Mauris pellentesque ullamcorper elit, nec elementum elit dictum vulputate. Integer lacus purus, feugiat non eros sed, consequat feugiat magna. Vestibulum ultricies egestas ligula vel pulvinar. Mauris pellentesque laoreet dolor eu viverra.",
+      "description": "A sinlge pad ice arena built to supliminent an existing facility. This project uniquley combines tilt-up construction for the primary walls supporting a frame-less pre-engineered steel builting for the roof.",
       "image": "/images/Project Photos/Sardis Sports Complex/HJB Biulding_6.JPG",
-      "coordinates": [49.1667, -121.9667]
+      "coordinates": [49.10674398636357, -121.97842583752089]
     },
     {
       "name": "Fair Haven Vancouver",
       "slug": "fair-haven-vancouver",
       "location": "Vancouver, BC",
       "type": ["Wood Frame", "Multi-Family", "BC Housing"],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique nibh quis lorem pharetra lacinia. Donec felis nisi, condimentum eu massa ac, fermentum imperdiet mi. Nunc a volutpat metus. Fusce efficitur quam in lacus sagittis laoreet. Sed quis erat malesuada, luctus justo sit amet, dapibus elit. Vestibulum vitae massa enim. Donec ultricies diam a finibus tincidunt. Praesent tempor rutrum metus, ut pretium sapien. Mauris pellentesque ullamcorper elit, nec elementum elit dictum vulputate. Integer lacus purus, feugiat non eros sed, consequat feugiat magna. Vestibulum ultricies egestas ligula vel pulvinar. Mauris pellentesque laoreet dolor eu viverra.",
+      "description": "A seniors home built for Fair Haven Home Society. The project is comprised of a 4 story wood framed building over a single level of underground parking.",
       "image": "/images/Project Photos/Fair Haven Vancouver/HJB Biulding_11.JPG",
-      "coordinates": [49.2827, -123.1207]
+      "coordinates": [49.225556521524965, -123.0511027020884]
     },
     {
-      "name": "Fair Haven Burnaby",
-      "slug": "fair-haven-burnaby",
+      "name": "Fair Haven McKay",
+      "slug": "fair-haven-mckay",
       "location": "Burnaby, BC",
       "type": ["Wood Frame", "Multi-Family", "BC Housing"],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique nibh quis lorem pharetra lacinia. Donec felis nisi, condimentum eu massa ac, fermentum imperdiet mi. Nunc a volutpat metus. Fusce efficitur quam in lacus sagittis laoreet. Sed quis erat malesuada, luctus justo sit amet, dapibus elit. Vestibulum vitae massa enim. Donec ultricies diam a finibus tincidunt. Praesent tempor rutrum metus, ut pretium sapien. Mauris pellentesque ullamcorper elit, nec elementum elit dictum vulputate. Integer lacus purus, feugiat non eros sed, consequat feugiat magna. Vestibulum ultricies egestas ligula vel pulvinar. Mauris pellentesque laoreet dolor eu viverra.",
+      "description": "A seniors home built for Fair Haven Home Society. The project is comprised of a 4 story wood framed building over a single level of underground parking.",
       "image": "/images/Project Photos/Fair Haven Burnaby/HJB Biulding_10.JPG",
-      "coordinates": [49.2488, -122.9805]
+      "coordinates": [49.2151878337077, -123.00830199449892]
     },
     {
-      "name": "Vancouver Resource Society",
-      "slug": "vancouver-resource-society",
+      "name": "The Eleanor",
+      "slug": "the-eleanor",
       "location": "North Vancouver, BC",
       "type": ["Wood Frame", "Multi-Family", "BC Housing"],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique nibh quis lorem pharetra lacinia. Donec felis nisi, condimentum eu massa ac, fermentum imperdiet mi. Nunc a volutpat metus. Fusce efficitur quam in lacus sagittis laoreet. Sed quis erat malesuada, luctus justo sit amet, dapibus elit. Vestibulum vitae massa enim. Donec ultricies diam a finibus tincidunt. Praesent tempor rutrum metus, ut pretium sapien. Mauris pellentesque ullamcorper elit, nec elementum elit dictum vulputate. Integer lacus purus, feugiat non eros sed, consequat feugiat magna. Vestibulum ultricies egestas ligula vel pulvinar. Mauris pellentesque laoreet dolor eu viverra.",
+      "description": "A 6 story wood framed builting for affordable rental units, over a single leel of parking.",
       "image": "/images/Project Photos/Vancouver Resource Society/HJB Biulding_4.JPG",
-      "coordinates": [49.3160, -123.0760]
+      "coordinates": [49.326998033868044, -123.07095543671096]
     },
     {
       "name": "Cold Storage Facility",
       "slug": "cold-storage-facility",
       "location": "Surrey, BC",
       "type": ["Structural Steel", "Industrial", "Warehouse"],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique nibh quis lorem pharetra lacinia. Donec felis nisi, condimentum eu massa ac, fermentum imperdiet mi. Nunc a volutpat metus. Fusce efficitur quam in lacus sagittis laoreet. Sed quis erat malesuada, luctus justo sit amet, dapibus elit. Vestibulum vitae massa enim. Donec ultricies diam a finibus tincidunt. Praesent tempor rutrum metus, ut pretium sapien. Mauris pellentesque ullamcorper elit, nec elementum elit dictum vulputate. Integer lacus purus, feugiat non eros sed, consequat feugiat magna. Vestibulum ultricies egestas ligula vel pulvinar. Mauris pellentesque laoreet dolor eu viverra.",
+      "description": "A cold storage faclity targeting the food industry.  The main building is constructed from structural steel clad with insulated metal panels.  This porject also feature several accessory building housing offices, and mechanical spaces.",
       "image": "/images/Project Photos/Cold Storage Facility/HJB Biulding_12.JPG",
-      "coordinates": [49.3160, -123.0760]
+      "coordinates": [49.059317930744015, -122.7016341097279]
     }
   ]
 }

@@ -3,6 +3,20 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import projectsData from '@/../public/images/Project Photos/description.json';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the Map component to avoid SSR issues with Leaflet
+const Map = dynamic(() => import('@/components/Map'), { 
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-slate-100 dark:bg-slate-900 text-slate-400">
+      <span className="flex items-center gap-2">
+        <span className="material-symbols-outlined animate-spin">refresh</span>
+        Loading Map...
+      </span>
+    </div>
+  )
+});
 
 // --- Type Definitions for Project Data ---
 // This defines the shape of a single project object. 
@@ -58,16 +72,18 @@ export default function ProjectsPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-secondary dark:text-white leading-[1.1]">
             Our Portfolio
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-            Explore our portfolio of precision structural solutions. From heritage retrofits in Gastown to modern high-rises in Burnaby, we ensure stability meets aesthetics.
-          </p>
         </div>
+      </section>
+
+      {/* Dynamic Map Section */}
+      <section className="w-full h-[500px] bg-slate-100 dark:bg-slate-900 overflow-hidden relative z-0">
+        <Map projects={projectsData.projects as Project[]} />
       </section>
       
       {/* Filter Buttons Section */}
       <section className="sticky top-[73px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-4 border-y border-gray-100 dark:border-gray-800">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-10 overflow-x-auto" style={{ scrollbarWidth: 'none' }}>
-          <div className="flex gap-3 min-w-max justify-start md:justify-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-10">
+          <div className="flex flex-wrap gap-3 justify-center">
             {/* Dynamically render filter buttons from our project types */}
             {projectTypes.map((type) => (
               <button
@@ -92,7 +108,7 @@ export default function ProjectsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Dynamically render project cards from the filteredProjects state */}
             {filteredProjects.map((project) => (
-              <Link href={`/projects/${project.slug}`} key={project.slug} className="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 cursor-pointer aspect-[4/3] shadow-sm hover:shadow-xl transition-all duration-300">
+              <Link href={`/projects/${project.slug}`} key={project.slug} className="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 cursor-pointer aspect-[4/3] shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300">
                 <Image
                   src={project.image}
                   alt={`Image of ${project.name}`}
@@ -121,43 +137,22 @@ export default function ProjectsPage() {
                       <span className="material-symbols-outlined text-white">arrow_outward</span>
                     </div>
                   </div>
-                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300">
-                    <div className="overflow-hidden">
-                      <p className="text-sm text-slate-200/90 mt-3 pt-3 border-t border-white/20">
-                        {project.description}
-                      </p>
-                    </div>
-                  </div>
+
                 </div>
               </Link>
             ))}
           </div>
-          <div className="mt-12 flex justify-center">
-            <button className="flex items-center gap-2 text-slate-900 dark:text-white font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors">
-              Load More Projects
-              <span className="material-symbols-outlined">expand_more</span>
-            </button>
-          </div>
+          {projectsData.projects.length > 9 && (
+            <div className="mt-12 flex justify-center">
+              <button className="flex items-center gap-2 text-slate-900 dark:text-white font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors">
+                Load More Projects
+                <span className="material-symbols-outlined">expand_more</span>
+              </button>
+            </div>
+          )}
         </div>
       </div>
-      <section className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800">
-        <div className="max-w-[960px] mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-secondary dark:text-white mb-4 tracking-tight">
-            Building something ambitious?
-          </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how we can bring your structural vision to life with precision, safety, and efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="flex items-center justify-center h-12 px-8 rounded-lg bg-primary text-white text-base font-bold shadow-lg hover:bg-secondary transition-all hover:scale-105">
-              Contact Our Team
-            </Link>
-            <Link href="/services" className="flex items-center justify-center h-12 px-8 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent text-slate-900 dark:text-white text-base font-bold hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors">
-              View Services
-            </Link>
-          </div>
-        </div>
-      </section>
+
     </>
   );
 }

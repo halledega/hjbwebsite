@@ -20,7 +20,7 @@ export default function AboutPage() {
             </Link> */}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
               <div className="aspect-[3/4] overflow-hidden bg-slate-200">
                 <Image alt="Professional headshot of Doug Birch" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Man in blue suit smiling professionally" src="/images/people/Doug Birch_Updated.JPG" width={300} height={400} />
               </div>
@@ -40,7 +40,7 @@ export default function AboutPage() {
                 </span> */}
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
               <div className="aspect-[3/4] overflow-hidden bg-slate-200">
                 <Image alt="Professional headshot of Elena Rostova" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Woman in blazer with glasses looking confident" src="/images/people/Michael H.JPG" width={300} height={400} />
               </div>
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 </span> */}
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
               <div className="aspect-[3/4] overflow-hidden bg-slate-200">
                 <Image alt="Professional headshot of Michael Chen" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Man in grey suit tie smiling at camera" src="/images/people/Dylan James Headshot.jpg" width={300} height={400} />
               </div>
@@ -86,8 +86,6 @@ export default function AboutPage() {
         </div>
       </div>
       <div className="w-full bg-secondary text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 radial-gradient">
-        </div>
         <div className="relative max-w-[960px] mx-auto px-6 py-20 text-center flex flex-col items-center gap-6">
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <Link href="/contact" className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 transition-colors text-white text-base font-bold">

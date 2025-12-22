@@ -32,7 +32,7 @@ export default function Home() {
             {/* Dynamically render service cards from services.json */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {servicesData.map((service) => (
-                <div key={service.slug} className="group flex flex-col gap-4 rounded-xl p-8 bg-white dark:bg-[#1a2632] border border-transparent hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div key={service.slug} className="group flex flex-col gap-4 rounded-xl p-8 bg-white dark:bg-[#1a2632] border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
                   <h3 className="text-xl font-bold text-[#0e141b] dark:text-white">{service.title}</h3>
                   <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                     {service.description}

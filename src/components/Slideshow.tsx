@@ -61,8 +61,8 @@ export default function Slideshow({ children, slides }: SlideshowProps) {
         />
       ))}
 
-      {/* Dark gradient overlay for readability of foreground content */}
-      <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 via-secondary/40 to-transparent z-10" />
+      {/* Dark overlay for readability of foreground content */}
+      <div className="absolute inset-0 bg-black/40 z-10" />
       
       {/* Foreground content passed as children */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center">

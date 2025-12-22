@@ -2,11 +2,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import NavLink from './NavLink';
+import { useState } from 'react';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] dark:border-slate-700 bg-white dark:bg-[#111921] px-4 md:px-10 py-3">
-      <Link href="/" className="flex items-center gap-3 text-[#0e141b] dark:text-white">
+    <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] dark:border-slate-700 bg-white dark:bg-[#111921] px-4 md:px-10 py-3 relative">
+      <Link href="/" className="flex items-center gap-3 text-[#0e141b] dark:text-white" onClick={closeMenu}>
         <Image alt="HJB Engineering Logo" width={60} height={60} className="h-10 w-auto" src="/images/HJB Logo.png" />
         <h2 className="text-[#0e141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">HJB Engineering</h2>
       </Link>
@@ -18,15 +29,21 @@ export default function Header() {
           <NavLink href="/projects">Projects</NavLink>
           <NavLink href="/contact">Contact</NavLink>
         </nav>
-        {/* <Link href="/contact">
-          <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-secondary transition-colors">
-            <span className="truncate">Contact Us</span>
-          </button>
-        </Link> */}
       </div>
-      <button className="md:hidden text-[#0e141b] dark:text-white">
-        <span className="material-symbols-outlined">menu</span>
+      <button className="md:hidden text-[#0e141b] dark:text-white" onClick={toggleMenu} aria-label="Toggle menu">
+        <span className="material-symbols-outlined">{isMenuOpen ? 'close' : 'menu'}</span>
       </button>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white dark:bg-[#111921] border-b border-[#e7edf3] dark:border-slate-700 shadow-lg md:hidden flex flex-col p-4 gap-4 z-40">
+          <NavLink href="/" onClick={closeMenu}>Home</NavLink>
+          <NavLink href="/about" onClick={closeMenu}>About</NavLink>
+          <NavLink href="/services" onClick={closeMenu}>Services</NavLink>
+          <NavLink href="/projects" onClick={closeMenu}>Projects</NavLink>
+          <NavLink href="/contact" onClick={closeMenu}>Contact</NavLink>
+        </div>
+      )}
     </header>
   );
 }
