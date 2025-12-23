@@ -77,7 +77,7 @@ export default function ProjectsPage() {
 
       {/* Dynamic Map Section */}
       <section className="w-full h-[500px] bg-slate-100 dark:bg-slate-900 overflow-hidden relative z-0">
-        <Map projects={projectsData.projects as Project[]} />
+        <Map projects={projectsData.projects as Project[]} showOffice={true} zoom={9} />
       </section>
       
       {/* Filter Buttons Section */}

@@ -15,15 +15,9 @@ export default function AboutPage() {
                 Our team brings together decades of experience in structural analysis, seismic retrofitting, and project management.
               </p>
             </div>
-            {/* <Link className="text-primary font-bold flex items-center hover:underline" href="/team">
-              View Full Team <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-            </Link> */}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div className="aspect-[3/4] overflow-hidden bg-slate-200">
-                <Image alt="Professional headshot of Doug Birch" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Man in blue suit smiling professionally" src="/images/people/Doug Birch_Updated.JPG" width={300} height={400} />
-              </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-secondary dark:text-white">Doug Birch</h3>
                 <h3 className="text-sm font-bold text-secondary dark:text-white">P.Eng, Struct Eng.</h3>
@@ -35,15 +29,9 @@ export default function AboutPage() {
                 <p className="text-slate-500 dark:text-slate-400 text-xs mb-3">
                 Doug is a registered Professional Engineer in British Columbia, Alberta, Ontario, and the Northwest Territories.
                 </p>
-                {/* <span className="text-xs font-bold text-slate-900 dark:text-slate-200 group-hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
-                  Read Bio <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-                </span> */}
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div className="aspect-[3/4] overflow-hidden bg-slate-200">
-                <Image alt="Professional headshot of Elena Rostova" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Woman in blazer with glasses looking confident" src="/images/people/Michael H.JPG" width={300} height={400} />
-              </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-secondary dark:text-white">Michael Halliday</h3>
                 <h3 className="text-sm font-bold text-secondary dark:text-white">P.Eng.</h3>
@@ -58,28 +46,19 @@ export default function AboutPage() {
                   Michael is a registered Professional Engineer in British Columbia, Saskatchewan and Manitoba.  
 
                 </p>
-                {/* <span className="text-xs font-bold text-slate-900 dark:text-slate-200 group-hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
-                  Read Bio <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-                </span> */}
               </div>
             </div>
             <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div className="aspect-[3/4] overflow-hidden bg-slate-200">
-                <Image alt="Professional headshot of Michael Chen" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Man in grey suit tie smiling at camera" src="/images/people/Dylan James Headshot.jpg" width={300} height={400} />
-              </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-secondary dark:text-white">DylanJames</h3>
                 <h3 className="text-sm font-bold text-secondary dark:text-white">P.Eng.</h3>
                 <p className="text-primary text-sm font-medium mb-2">Pincipal</p>
                 <p className="text-slate-500 dark:text-slate-400 text-xs mb-3">
-                  A 2017 graduate of the British Columbia Institute of Technology, Dylan transitioned from welding and steel erecting to structural engineering.
+                  With a foundational background in welding and steel erecting, Dylan brings a deeper understanding of practical construction to structural engineering.
                 </p>
                 <p className="text-slate-500 dark:text-slate-400 text-xs mb-3">
-                  Focusing on tilt-up and structural steel design. He is a founding board member of TILT (Tilt-Up Industry Leaders of Tomorrow) and serves on the Tilt-Up Concrete Association’s Canadian Advisory Board. 
+                  He specializes in tilt-up and structural steel design, utilizing his hands-on field experience to deliver efficient site-ready solutions, and serves on the Tilt-Up Concrete Association’s Canadian Advisory Board. 
                 </p>
-                {/* <span className="text-xs font-bold text-slate-900 dark:text-slate-200 group-hover:text-primary transition-colors flex items-center gap-1 cursor-pointer">
-                  Read Bio <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-                </span> */}
               </div>
             </div>
           </div>

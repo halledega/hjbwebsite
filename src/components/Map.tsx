@@ -1,9 +1,9 @@
 "use client";
 
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, CircleMarker, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 // Fix for default Leaflet markers in Next.js/React
 const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png';
@@ -30,43 +30,62 @@ type Project = {
 };
 
 interface MapProps {
-  projects: Project[];
+  projects?: Project[];
+  center?: [number, number];
+  zoom?: number;
+  showOffice?: boolean;
 }
 
 const mapStyle = { height: "100%", width: "100%", zIndex: 0 };
 
-const Map = ({ projects }: MapProps) => {
-  // Use a key that changes on mount to force a fresh MapContainer
-  const [mapKey, setMapKey] = useState<string | null>(null);
-
+// Component to handle map view updates
+const MapController = ({ center, zoom }: { center: [number, number], zoom: number }) => {
+  const map = useMap();
   useEffect(() => {
-    // Generate a unique key on client-side mount
-    setMapKey(`map-${Date.now()}`);
-  }, []);
+    map.setView(center, zoom);
+  }, [center, zoom, map]);
+  return null;
+};
 
-  if (!mapKey) return null;
-
-  // Default center (Vancouver area)
-  const defaultCenter: [number, number] = [49.2, -122.5];
-  const defaultZoom = 9;
+const Map = ({ projects = [], center, zoom, showOffice = false }: MapProps) => {
+  // Actual office coordinates: 110 2920 Virtual Way, Vancouver, BC V5M 0C4
+  const officeCenter: [number, number] = [49.261096, -123.041937];
+  const defaultCenter = center || officeCenter;
+  const defaultZoom = zoom || (showOffice ? 11 : 9); // Zoom 11 covers Greater Vancouver well
 
   return (
     <MapContainer 
-      key={mapKey}
       center={defaultCenter} 
       zoom={defaultZoom} 
       scrollWheelZoom={false} 
       style={mapStyle}
     >
+      <MapController center={defaultCenter} zoom={defaultZoom} />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      
+      {showOffice && (
+        <Marker position={officeCenter} icon={customIcon}>
+          <Popup>
+            <div className="flex flex-col gap-1 min-w-[150px]">
+              <h3 className="font-bold text-sm text-secondary">HJB Engineering</h3>
+              <p className="text-xs text-gray-600">
+                110 2920 Virtual Way<br />
+                Vancouver, BC V5M 0C4
+              </p>
+            </div>
+          </Popup>
+        </Marker>
+      )}
+
       {projects.map((project) => (
-        <Marker 
+        <CircleMarker 
           key={project.slug} 
-          position={project.coordinates} 
-          icon={customIcon}
+          center={project.coordinates} 
+          radius={8}
+          pathOptions={{ color: '#00539b', fillColor: '#00539b', fillOpacity: 0.6, weight: 2 }}
         >
           <Popup>
             <div className="flex flex-col gap-2 min-w-[200px]">
@@ -77,7 +96,7 @@ const Map = ({ projects }: MapProps) => {
               </a>
             </div>
           </Popup>
-        </Marker>
+        </CircleMarker>
       ))}
     </MapContainer>
   );

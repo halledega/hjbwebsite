@@ -2,6 +2,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the Map component to avoid SSR issues with Leaflet
+const Map = dynamic(() => import('@/components/Map'), { 
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-slate-100 dark:bg-slate-900 text-slate-400">
+      <span className="flex items-center gap-2">
+        <span className="material-symbols-outlined animate-spin">refresh</span>
+        Loading Map...
+      </span>
+    </div>
+  )
+});
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -60,7 +74,7 @@ export default function ContactPage() {
               Let&apos;s Build Together
             </h1>
             <p className="text-slate-600 dark:text-slate-300 text-lg font-normal leading-normal">
-              Reach out to discuss your next structural project in Vancouver. Our engineers are ready to help.
+              Reach out to discuss your next structural project. Our engineers are ready to help.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-4">
@@ -163,15 +177,6 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 size-10 rounded-full bg-slate-100 dark:bg-primary/20 flex items-center justify-center text-primary">
-                    <span className="material-symbols-outlined">call</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-secondary dark:text-white">Phone</p>
-                    <a className="text-slate-500 dark:text-slate-300 mt-1 hover:text-primary transition-colors block" href="tel:+16045550199">+1 (604) 555-0199</a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 size-10 rounded-full bg-slate-100 dark:bg-primary/20 flex items-center justify-center text-primary">
                     <span className="material-symbols-outlined">mail</span>
                   </div>
                   <div>
@@ -180,15 +185,9 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              <div className="relative w-full h-80 rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700/50 group">
-                <Image alt="Map showing Vancouver office location with abstract city grid overlay" className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="Map showing Vancouver office location with abstract city grid overlay" data-location="Vancouver" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEQppoua_qQuHPg6yWz_rUk-Bk9cZzS2vrdmia1FPz2YmBVmP6GF01Z8Tloi8AeArgKBCMNx38TJTu1Fu36VHyjyn8Z1wzAE22r2_BwIKNbRynI_g0ktJC9J7nyr0_e2eRgjPp5LSJyI9SgkA4xzvasEJvEAJCybl9qsn_bU33OAiPqdowv-gJRp9OjymnWiQQoVVvQ4k-6fp8sBk4rjfWKL8XACEuw23zP3lgj7YRC4xYM5tFqyd1WRI7gTK1iA1fkpCo2RC_eHqj" width={400} height={320} />
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative">
-                    <span className="material-symbols-outlined text-5xl text-primary drop-shadow-lg">location_on</span>
-                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-3 h-1 bg-black/30 rounded-full blur-[2px]"></div>
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-secondary/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-secondary dark:text-slate-200 shadow-sm border border-slate-200 dark:border-slate-700">
+              <div className="relative w-full h-80 rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700/50">
+                <Map showOffice={true} zoom={14} />
+                <div className="absolute bottom-4 left-4 z-[400] bg-white/90 dark:bg-secondary/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-secondary dark:text-slate-200 shadow-sm border border-slate-200 dark:border-slate-700">
                   Serving Greater Vancouver
                 </div>
               </div>

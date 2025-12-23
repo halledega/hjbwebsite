@@ -52,8 +52,13 @@ This Next.js project is a corporate website for HJB Engineering Ltd., built with
 *   **Contact Page (`src/app/contact/page.tsx`)**:
     *   Address updated to match the footer.
     *   **Email Updated**: Contact email updated to `admin@hjbeng.com`.
+    *   **Interactive Map**: Replaced the static map image with the interactive `react-leaflet` component, showing the precise office location at 110 2920 Virtual Way.
     *   **Form Logic**: Finalized the contact form. Replaced "Project Type" with "Subject". Implemented backend logic using `nodemailer` (API route `/api/contact`) to simulate email sending (logs to console if SMTP env vars are missing).
     *   **UI Polish**: Added `shadow-lg` to the contact form, contact info, and map containers.
+*   **Map Component (`src/components/Map.tsx`)**:
+    *   Updated default center to the actual office coordinates ([49.261096, -123.041937]).
+    *   Added support for displaying an office marker with a popup.
+    *   Integrated office marker into both the Contact and Projects pages for consistency.
 *   **Dynamic Project Detail Pages (`src/app/projects/[slug]/page.tsx`)**:
     *   Created a dynamic route to display individual project details using the `slug`.
     *   Utilizes `generateStaticParams` for build-time static generation of project pages.

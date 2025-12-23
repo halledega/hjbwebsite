@@ -53,12 +53,6 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-white font-bold mb-4">Vancouver Office</h4>
-            <div className="w-full h-[120px] rounded-lg overflow-hidden bg-slate-800 mb-3 relative">
-              <Image alt="Map showing location of Vancouver office" className="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity" data-location="Vancouver, BC" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDswu_iXbx-0S28-HH6mRil6I8qwkyBBAPqOgtnvDbSOZvdLJ2r0zk8Z73Qfhh9wCdYW3qmUkKj6elrJZN3Gf1McFPjnd4U0WOrtVYgiJQXFlkntokgpGjEmz91qm8k6o1TwFRDuYVphypcrUmGA5v5LkTAU_5V-5Y88HPV7VuqOlZTA6kQoJut7Yl6Sts-C2-eWahqPGfIrY3dl-zyf3W5lsxlhn5IH8wevIVX7vmQgIJrNVnX7Tac7JS4QAek0zqDVUbEZiZ6QoaC" width={200} height={120} />
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span className="material-symbols-outlined text-primary text-3xl drop-shadow-lg">location_on</span>
-              </div>
-            </div>
             <p className="text-sm text-slate-400">
               110 2920 Virtual Way<br />
               Vancouver, BC V5M 0C4
@@ -66,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© 2024 HJB Engineering Ltd. All rights reserved.</p>
+          <p>© 2025 HJB Engineering Ltd. All rights reserved.</p>
           <div className="flex gap-6">
             <Link className="hover:text-slate-300" href="/privacy-policy">Privacy Policy</Link>
             <Link className="hover:text-slate-300" href="/terms-of-service">Terms of Service</Link>
