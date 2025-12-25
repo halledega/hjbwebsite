@@ -8,18 +8,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section with Background Slideshow */}
-      <Slideshow slides={projectsData.projects}>
-        <div className="relative z-10 px-6 md:px-10 lg:px-40 py-24 md:py-32 flex justify-center">
-            <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/projects" className="flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-blue-600 transition-colors text-white text-base font-bold shadow-lg shadow-blue-900/30">
-                View Portfolio
-              </Link>
-              <Link href="/contact" className="flex cursor-pointer items-center justify-center rounded-lg h-12 px-8 bg-white/5 hover:bg-white/10 transition-colors text-white text-base font-bold border border-white/20 backdrop-blur-sm">
-                Contact Us
-              </Link>
-            </div>
-        </div>
-      </Slideshow>
+      <Slideshow slides={projectsData.projects}></Slideshow>
       <div className="px-6 md:px-10 lg:px-40 py-12 md:py-20 flex justify-center bg-white dark:bg-background-dark">
         <div className="w-full max-w-[1200px] flex flex-col gap-16">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start border-b border-gray-200 dark:border-gray-800 pb-12">
@@ -49,20 +38,6 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </div>
-      <div className="bg-primary relative overflow-hidden text-white py-16 px-6 md:px-10 lg:px-40">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="relative max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 z-10">
-          <div className="flex flex-col gap-2 text-center md:text-left">
-            <h2 className="text-3xl font-bold">Ready to start your project?</h2>
-            <p className="text-blue-100 text-lg">Let&apos;s discuss your structural engineering needs today.</p>
-          </div>
-          <div className="flex gap-4">
-            <Link href="/contact" className="bg-white text-secondary hover:bg-blue-50 hover:text-primary transition-all px-8 py-3 rounded-lg font-bold shadow-lg shadow-secondary/20">
-              Request Consultation
-            </Link>
           </div>
         </div>
       </div>

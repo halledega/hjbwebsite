@@ -47,7 +47,7 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4">Company</h4>
             <ul className="flex flex-col gap-2 text-sm text-slate-400">
               <li><Link className="hover:text-primary transition-colors" href="/about">About Us</Link></li>
-              <li><Link className="hover:text-primary transition-colors" href="/projects">Our Portfolio</Link></li>
+              <li><Link className="hover:text-primary transition-colors" href="/projects">Featured Projects</Link></li>
               <li><Link className="hover:text-primary transition-colors" href="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -61,10 +61,6 @@ export default function Footer() {
         </div>
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <p>© 2025 HJB Engineering Ltd. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link className="hover:text-slate-300" href="/privacy-policy">Privacy Policy</Link>
-            <Link className="hover:text-slate-300" href="/terms-of-service">Terms of Service</Link>
-          </div>
         </div>
       </div>
     </footer>

@@ -1,7 +1,4 @@
 "use client";
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
 import dynamic from 'next/dynamic';
 
 // Dynamically import the Map component to avoid SSR issues with Leaflet
@@ -18,149 +15,21 @@ const Map = dynamic(() => import('@/components/Map'), {
 });
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('loading');
-    setErrorMessage('');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
-      }
-
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      console.error('Submission error:', error);
-      setStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : 'Failed to send message. Please try again.');
-    }
-  };
-
   return (
     <>
       <div className="flex-grow flex flex-col items-center w-full px-4 md:px-10 lg:px-40 py-8 lg:py-12">
         <div className="w-full max-w-[1200px] flex flex-col gap-10">
           <div className="flex flex-col gap-3 max-w-2xl">
             <h1 className="text-secondary dark:text-white text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em]">
-              Let&apos;s Build Together
+              Contact Us
             </h1>
             <p className="text-slate-600 dark:text-slate-300 text-lg font-normal leading-normal">
               Reach out to discuss your next structural project. Our engineers are ready to help.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-4">
-            <div className="lg:col-span-7 bg-surface-light dark:bg-surface-dark p-6 md:p-8 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700/50">
-              <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-                <div className="flex flex-col md:flex-row gap-6">
-                  <label className="flex flex-col flex-1 gap-2">
-                    <span className="text-base font-medium text-secondary dark:text-slate-200">Full Name</span>
-                    <input 
-                      className="form-input w-full rounded-lg border-slate-200 dark:border-slate-600 bg-background-light dark:bg-[#0d2a58] text-slate-900 dark:text-white focus:border-primary focus:ring-primary h-12 px-4 placeholder:text-slate-400" 
-                      placeholder="Jane Doe" 
-                      required 
-                      type="text" 
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                    />
-                  </label>
-                  <label className="flex flex-col flex-1 gap-2">
-                    <span className="text-base font-medium text-secondary dark:text-slate-200">Email Address</span>
-                    <input 
-                      className="form-input w-full rounded-lg border-slate-200 dark:border-slate-600 bg-background-light dark:bg-[#0d2a58] text-slate-900 dark:text-white focus:border-primary focus:ring-primary h-12 px-4 placeholder:text-slate-400" 
-                      placeholder="jane@example.com" 
-                      required 
-                      type="email" 
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                  </label>
-                </div>
-                <label className="flex flex-col flex-1 gap-2">
-                  <span className="text-base font-medium text-secondary dark:text-slate-200">Subject</span>
-                  <input 
-                    className="form-input w-full rounded-lg border-slate-200 dark:border-slate-600 bg-background-light dark:bg-[#0d2a58] text-slate-900 dark:text-white focus:border-primary focus:ring-primary h-12 px-4 placeholder:text-slate-400" 
-                    placeholder="Project Inquiry..." 
-                    required 
-                    type="text" 
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                  />
-                </label>
-                <label className="flex flex-col flex-1 gap-2">
-                  <span className="text-base font-medium text-secondary dark:text-slate-200">Message</span>
-                  <textarea 
-                    className="form-textarea w-full rounded-lg border-slate-200 dark:border-slate-600 bg-background-light dark:bg-[#0d2a58] text-slate-900 dark:text-white focus:border-primary focus:ring-primary min-h-[160px] p-4 placeholder:text-slate-400 resize-y" 
-                    placeholder="Tell us about your project details..."
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                  ></textarea>
-                </label>
-                
-                {status === 'error' && (
-                  <div className="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 p-3 rounded-lg text-sm border border-red-200 dark:border-red-800">
-                    {errorMessage}
-                  </div>
-                )}
-                
-                {status === 'success' && (
-                  <div className="bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 p-3 rounded-lg text-sm border border-green-200 dark:border-green-800">
-                    Message sent successfully! We will get back to you shortly.
-                  </div>
-                )}
-
-                <button 
-                  className={`mt-2 w-full md:w-auto self-start bg-primary hover:bg-primary-hover text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-[1.01] shadow-md flex items-center justify-center gap-2 ${status === 'loading' ? 'opacity-70 cursor-not-allowed' : ''}`} 
-                  type="submit"
-                  disabled={status === 'loading'}
-                >
-                  {status === 'loading' ? (
-                    <>
-                      <span className="material-symbols-outlined text-sm animate-spin">refresh</span>
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Send Message</span>
-                      <span className="material-symbols-outlined text-sm">send</span>
-                    </>
-                  )}
-                </button>
-              </form>
-            </div>
-            <div className="lg:col-span-5 flex flex-col gap-8">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-4">
+            <div className="flex flex-col gap-8">
               <div className="bg-surface-light dark:bg-surface-dark p-6 md:p-8 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700/50 flex flex-col gap-6">
                 <h3 className="text-xl font-bold text-secondary dark:text-white mb-2">Contact Information</h3>
                 <div className="flex items-start gap-4">
@@ -185,11 +54,12 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              <div className="relative w-full h-80 rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700/50">
-                <Map showOffice={true} zoom={14} />
-                <div className="absolute bottom-4 left-4 z-[400] bg-white/90 dark:bg-secondary/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-secondary dark:text-slate-200 shadow-sm border border-slate-200 dark:border-slate-700">
-                  Serving Greater Vancouver
-                </div>
+            </div>
+
+            <div className="relative w-full h-[400px] lg:h-full min-h-[400px] rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700/50">
+              <Map showOffice={true} zoom={14} />
+              <div className="absolute bottom-4 left-4 z-[400] bg-white/90 dark:bg-secondary/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-medium text-secondary dark:text-slate-200 shadow-sm border border-slate-200 dark:border-slate-700">
+                Serving Greater Vancouver
               </div>
             </div>
           </div>

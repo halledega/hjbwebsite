@@ -1,8 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Slideshow from '@/components/Slideshow'; // Import the new component
-import projectsData from '@/../public/images/Project Photos/description.json'; // Import project data
-
 export default function AboutPage() {
   return (
     <>
@@ -17,8 +12,8 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div className="p-4">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 flex flex-col">
+              <div className="p-4 flex-1">
                 <h3 className="text-lg font-bold text-secondary dark:text-white">Doug Birch</h3>
                 <h3 className="text-sm font-bold text-secondary dark:text-white">P.Eng, Struct Eng.</h3>
                 <p className="text-primary text-sm font-medium mb-2">Principal</p>
@@ -30,9 +25,15 @@ export default function AboutPage() {
                 Doug is a registered Professional Engineer in British Columbia, Alberta, Ontario, and the Northwest Territories.
                 </p>
               </div>
+			  <div className="pt-4 pb-4 px-4 border-t border-slate-100 dark:border-slate-700">
+                  <a href="mailto:dougb@hjbeng.com" className="text-primary hover:text-primary-hover text-sm font-medium flex items-center gap-2 transition-colors">
+                    <span className="material-symbols-outlined text-base">mail</span>
+                    dougb@hjbeng.com
+                  </a>
+                </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div className="p-4">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 flex flex-col">
+              <div className="p-4 flex-1">
                 <h3 className="text-lg font-bold text-secondary dark:text-white">Michael Halliday</h3>
                 <h3 className="text-sm font-bold text-secondary dark:text-white">P.Eng.</h3>
                 <p className="text-primary text-sm font-medium mb-2">Principal</p>
@@ -47,12 +48,18 @@ export default function AboutPage() {
 
                 </p>
               </div>
+			  <div className="pt-4 pb-4 px-4 border-t border-slate-100 dark:border-slate-700">
+                  <a href="mailto:michaelh@hjbeng.com" className="text-primary hover:text-primary-hover text-sm font-medium flex items-center gap-2 transition-colors">
+                    <span className="material-symbols-outlined text-base">mail</span>
+                    michaelh@hjbeng.com
+                  </a>
+                </div>
             </div>
-            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700">
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-secondary dark:text-white">DylanJames</h3>
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 flex flex-col">
+              <div className="p-4 flex-1">
+                <h3 className="text-lg font-bold text-secondary dark:text-white">Dylan James</h3>
                 <h3 className="text-sm font-bold text-secondary dark:text-white">P.Eng.</h3>
-                <p className="text-primary text-sm font-medium mb-2">Pincipal</p>
+                <p className="text-primary text-sm font-medium mb-2">Principal</p>
                 <p className="text-slate-500 dark:text-slate-400 text-xs mb-3">
                   With a foundational background in welding and steel erecting, Dylan brings a deeper understanding of practical construction to structural engineering.
                 </p>
@@ -60,19 +67,13 @@ export default function AboutPage() {
                   He specializes in tilt-up and structural steel design, utilizing his hands-on field experience to deliver efficient site-ready solutions, and serves on the Tilt-Up Concrete Association’s Canadian Advisory Board. 
                 </p>
               </div>
+			  <div className="pt-4 pb-4 px-4 border-t border-slate-100 dark:border-slate-700">
+                  <a href="mailto:dylanj@hjbeng.com" className="text-primary hover:text-primary-hover text-sm font-medium flex items-center gap-2 transition-colors">
+                    <span className="material-symbols-outlined text-base">mail</span>
+                    dylanj@hjbeng.com
+                  </a>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full bg-secondary text-white relative overflow-hidden">
-        <div className="relative max-w-[960px] mx-auto px-6 py-20 text-center flex flex-col items-center gap-6">
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Link href="/contact" className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 transition-colors text-white text-base font-bold">
-              Start a Project
-            </Link>
-            <Link href="/contact" className="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-transparent border border-white/30 hover:bg-white/10 transition-colors text-white text-base font-bold">
-              Contact Us
-            </Link>
           </div>
         </div>
       </div>

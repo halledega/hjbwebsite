@@ -7,6 +7,7 @@ import Image from 'next/image';
 type Slide = {
   name: string;
   image: string;
+  location?: string;
 };
 
 // Define the props for the Slideshow component.
@@ -64,6 +65,26 @@ export default function Slideshow({ children, slides }: SlideshowProps) {
       {/* Dark overlay for readability of foreground content */}
       <div className="absolute inset-0 bg-black/40 z-10" />
       
+      {/* Project Information Overlay */}
+      {slides.map((slide, index) => (
+        <div 
+          key={`info-${slide.name}`}
+          className={`absolute bottom-8 left-4 md:left-10 z-30 transition-opacity duration-1000 ease-in-out ${
+            index === currentIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="bg-black/50 backdrop-blur-md p-4 rounded-xl border border-white/10 shadow-2xl">
+            <h3 className="text-white text-lg md:text-xl font-bold mb-1">{slide.name}</h3>
+            {"location" in slide && (
+              <p className="text-white/80 text-sm flex items-center gap-1">
+                <span className="material-symbols-outlined text-base">location_on</span>
+                {slide.location as string}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+
       {/* Foreground content passed as children */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center">
         {children}

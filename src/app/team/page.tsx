@@ -19,8 +19,8 @@ export default function TeamPage() {
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-secondary dark:text-white">Doug Birch</h3>
                 <h4 className="text-sm font-bold text-secondary dark:text-white mb-2">P.Eng, Struct Eng.</h4>
-                <p className="text-primary text-sm font-medium mb-4">Principal</p>
-                <div className="text-slate-500 dark:text-slate-400 text-sm space-y-3 flex-1">
+                <h5 className="text-primary text-sm font-medium mb-4">Principal</h5>
+                <div className="text-slate-500 dark:text-slate-400 text-sm space-y-3 flex-1 mb-6">
                   <p>
                     Doug brings over 37 years of experience to HJB. His main areas of practice include institutional, industrial, commercial, and residential buildings in concrete, steel, and timber.
                   </p>
@@ -28,15 +28,22 @@ export default function TeamPage() {
                     Doug is a registered Professional Engineer in British Columbia, Alberta, Ontario, and the Northwest Territories.
                   </p>
                 </div>
+                <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                  <a href="mailto:dougb@hjbeng.com" className="text-primary hover:text-primary-hover text-sm font-medium flex items-center gap-2 transition-colors">
+                    <span className="material-symbols-outlined text-base">mail</span>
+                    dougb@hjbeng.com
+                  </a>
+                </div>
               </div>
             </div>
+
             {/* Michael Halliday */}
             <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 flex flex-col">
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-secondary dark:text-white">Michael Halliday</h3>
                 <h4 className="text-sm font-bold text-secondary dark:text-white mb-2">P.Eng.</h4>
                 <p className="text-primary text-sm font-medium mb-4">Principal</p>
-                <div className="text-slate-500 dark:text-slate-400 text-sm space-y-3 flex-1">
+                <div className="text-slate-500 dark:text-slate-400 text-sm space-y-3 flex-1 mb-6">
                   <p>
                     An experienced Professional Engineer with a demonstrated history in the structural engineering industry. He has extensive experience designing and detailing multi-storey wood frame, cast-in-place concrete, and structural steel buildings.
                   </p>
@@ -44,21 +51,34 @@ export default function TeamPage() {
                     Michael is a registered Professional Engineer in British Columbia, Saskatchewan, and Manitoba.
                   </p>
                 </div>
+                <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                  <a href="mailto:michaelh@hjbeng.com" className="text-primary hover:text-primary-hover text-sm font-medium flex items-center gap-2 transition-colors">
+                    <span className="material-symbols-outlined text-base">mail</span>
+                    michaelh@hjbeng.com
+                  </a>
+                </div>
               </div>
             </div>
+
             {/* Dylan James */}
             <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg border border-slate-200 dark:border-slate-700 flex flex-col">
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-secondary dark:text-white">Dylan James</h3>
                 <h4 className="text-sm font-bold text-secondary dark:text-white mb-2">P.Eng.</h4>
                 <p className="text-primary text-sm font-medium mb-4">Principal</p>
-                <div className="text-slate-500 dark:text-slate-400 text-sm space-y-3 flex-1">
+                <div className="text-slate-500 dark:text-slate-400 text-sm space-y-3 flex-1 mb-6">
                   <p>
                     With a foundational background in welding and steel erecting, Dylan brings a deeper understanding of practical construction to structural engineering. 
                   </p>
                   <p>
                     He specializes in tilt-up and structural steel design, utilizing his hands-on field experience to deliver efficient site-ready solutions, and serves on the Tilt-Up Concrete Association’s Canadian Advisory Board.
                   </p>
+                </div>
+                <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
+                  <a href="mailto:dylanj@hjbeng.com" className="text-primary hover:text-primary-hover text-sm font-medium flex items-center gap-2 transition-colors">
+                    <span className="material-symbols-outlined text-base">mail</span>
+                    dylanj@hjbeng.com
+                  </a>
                 </div>
               </div>
             </div>

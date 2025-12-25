@@ -70,14 +70,18 @@ export default function ProjectsPage() {
       <section className="relative w-full py-16 md:py-24 px-4 bg-background-light dark:bg-background-dark">
         <div className="max-w-[960px] mx-auto text-center flex flex-col items-center gap-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-secondary dark:text-white leading-[1.1]">
-            Our Portfolio
+            Featured Projects
           </h1>
         </div>
       </section>
 
       {/* Dynamic Map Section */}
-      <section className="w-full h-[500px] bg-slate-100 dark:bg-slate-900 overflow-hidden relative z-0">
-        <Map projects={projectsData.projects as Project[]} showOffice={true} zoom={9} />
+      <section className="w-full bg-background-light dark:bg-background-dark py-4">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-10">
+          <div className="w-full h-[500px] bg-slate-100 dark:bg-slate-900 overflow-hidden relative z-0 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
+            <Map projects={projectsData.projects as Project[]} showOffice={true} zoom={9} />
+          </div>
+        </div>
       </section>
       
       {/* Filter Buttons Section */}
